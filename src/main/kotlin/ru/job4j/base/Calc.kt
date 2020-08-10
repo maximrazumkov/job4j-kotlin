@@ -29,3 +29,8 @@ fun multiplication(first : Int, second : Int) : Int {
 fun division(first : Int, second : Int) : Int {
     return first / second;
 }
+
+fun max(first : Int, second: Int, thrid : Int) : Int {
+    val rsl = if (first > second) first else second
+    return if (rsl > thrid) rsl else thrid
+}

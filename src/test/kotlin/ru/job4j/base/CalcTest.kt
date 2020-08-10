@@ -19,4 +19,8 @@ class CalcTest : StringSpec({
     "64 / 16 = " {
         division(64, 16) shouldBe 4
     }
+
+    "5 < 7 < 10. 10 is max" {
+        max(7,5, 10) shouldBe 10
+    }
 })
