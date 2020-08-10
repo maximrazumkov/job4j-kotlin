@@ -1,0 +1,31 @@
+package ru.job4j.base
+
+fun main() {
+    val plus = summ(27, 73)
+    println("27 + 73 = $plus")
+
+    val minus = subtraction(96, 34)
+    println("96 - 34 = $minus")
+
+    val prod = multiplication(15, 15)
+    println("15 * 15 = $prod")
+
+    val div = division(64, 16)
+    println("64 / 16 = $div")
+}
+
+fun summ(first : Int, second : Int) : Int {
+    return first + second;
+}
+
+fun subtraction(first : Int, second : Int) : Int {
+    return first - second;
+}
+
+fun multiplication(first : Int, second : Int) : Int {
+    return first * second;
+}
+
+fun division(first : Int, second : Int) : Int {
+    return first / second;
+}
