@@ -1,6 +1,7 @@
 package ru.job4j.base
 
 fun main() {
+    /*
     val plus = summ(27, 73)
     println("27 + 73 = $plus")
 
@@ -12,6 +13,9 @@ fun main() {
 
     val div = division(64, 16)
     println("64 / 16 = $div")
+
+     */
+    draw(8)
 }
 
 fun summ(first : Int, second : Int) : Int {
@@ -33,4 +37,13 @@ fun division(first : Int, second : Int) : Int {
 fun max(first : Int, second: Int, thrid : Int) : Int {
     val rsl = if (first > second) first else second
     return if (rsl > thrid) rsl else thrid
+}
+
+fun draw(size : Int) {
+    for (i in 1 .. size) {
+        for (j in 1 .. size) {
+            if (i == j || (i + j) == (size + 1)) print("x") else print(" ")
+        }
+        println()
+    }
 }
