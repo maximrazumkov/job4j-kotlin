@@ -47,3 +47,14 @@ fun draw(size : Int) {
         println()
     }
 }
+
+fun defragment(array: Array<String?>) : Array<String?> {
+    val newArray = arrayOfNulls<String>(array.size)
+    var idx = 0
+    for (str in array) {
+        if (str != null) {
+            newArray[idx++] = str
+        }
+    }
+    return newArray;
+}
