@@ -1,20 +1,6 @@
 package ru.job4j.base
 
 fun main() {
-    /*
-    val plus = summ(27, 73)
-    println("27 + 73 = $plus")
-
-    val minus = subtraction(96, 34)
-    println("96 - 34 = $minus")
-
-    val prod = multiplication(15, 15)
-    println("15 * 15 = $prod")
-
-    val div = division(64, 16)
-    println("64 / 16 = $div")
-
-     */
     draw(8)
 }
 
@@ -42,7 +28,10 @@ fun max(first : Int, second: Int, thrid : Int) : Int {
 fun draw(size : Int) {
     for (i in 1 .. size) {
         for (j in 1 .. size) {
-            if (i == j || (i + j) == (size + 1)) print("x") else print(" ")
+            when (true) {
+                i == j, (i + j) == (size + 1) -> print("x")
+                else -> print(" ")
+            }
         }
         println()
     }
