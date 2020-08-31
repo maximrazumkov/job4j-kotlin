@@ -8,15 +8,13 @@ class BankService (
         users.putIfAbsent(user, ArrayList());
     }
 
-    fun findByRequisite(passport : String, requisite : String) : Account? {
-        val user = findByPassport(passport)
-        return users.get(user)?.find { it.requisite == requisite }
-    }
+    fun findByRequisite(passport : String, requisite : String) : Account? = getUserByPassport(passport)?.find { it.requisite == requisite }
 
     fun addAccount(passport : String, account : Account) {
-        val user = findByPassport(passport);
-        users.get(user)?.add(account);
+        getUserByPassport(passport)?.add(account)
     }
+
+    fun getUserByPassport(passport: String) : ArrayList<Account>? = users.get(findByPassport(passport))
 
     fun findByPassport(passport : String) = users.keys.find {it.passport == passport}
 
