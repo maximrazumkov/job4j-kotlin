@@ -11,7 +11,7 @@ class BankService (
     fun findByRequisite(passport : String, requisite : String) : Account? = getUserByPassport(passport)?.find { it.requisite == requisite }
 
     fun addAccount(passport : String, account : Account) {
-        getUserByPassport(passport)?.add(account)
+        getUserByPassport(passport)?.let { users -> users.add(account)}
     }
 
     fun getUserByPassport(passport: String) : ArrayList<Account>? = users.get(findByPassport(passport))
